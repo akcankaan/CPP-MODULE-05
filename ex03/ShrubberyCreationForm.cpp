@@ -13,7 +13,6 @@ void ShrubberyCreationForm::execute(const Bureaucrat& executor) const {
     if (executor.getGrade() > getExecGrade())
         throw AForm::GradeTooLowException();
 
-    // ASCII ağaç çizimi
     std::string tree =
         "   *   \n"
         "  ***  \n"
@@ -21,7 +20,6 @@ void ShrubberyCreationForm::execute(const Bureaucrat& executor) const {
         "*******\n"
         "   |   \n";
 
-    // Dosyayı açıp ağaç çizimini yazıyoruz
     std::ofstream file((target + "_shrubbery").c_str());
     if (file.is_open()) {
         file << tree;

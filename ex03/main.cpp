@@ -28,7 +28,7 @@ int main() {
         delete f3;
     }
 
-    delete f4; // nullptr ise sorun yok
+    delete f4;
 
     return 0;
 }

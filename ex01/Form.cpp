@@ -7,9 +7,9 @@ Form::Form(const std::string &n, int sGrade, int eGrade)
     : name(n), isSigned(false), signGrade(sGrade), execGrade(eGrade)
 {
     if (sGrade < 1 || eGrade < 1)
-        throw Form::GradeTooHighException(); // `Form::` ekliyoruz
+        throw Form::GradeTooHighException();
     if (sGrade > 150 || eGrade > 150)
-        throw Form::GradeTooLowException(); // `Form::` ekliyoruz
+        throw Form::GradeTooLowException();
 }
 
 Form::Form(const Form &other)
@@ -32,11 +32,10 @@ int Form::getExecGrade() const { return execGrade; }
 void Form::beSigned(const Bureaucrat &b)
 {
     if (b.getGrade() > signGrade)
-        throw Form::GradeTooLowException(); // `Form::` ekliyoruz
+        throw Form::GradeTooLowException();
     isSigned = true;
 }
 
-// Exceptions with `Form::` prefix
 const char *Form::GradeTooHighException::what() const throw()
 {
     return "Form grade is too high!";

@@ -17,10 +17,10 @@ void RobotomyRequestForm::execute(const Bureaucrat& executor) const {
     std::srand(std::time(0));
     int success = std::rand() % 2;
 
-    std::cout << "Drilling noises...\n";
+    std::cout << "Drilling noises..." << std::endl;
     if (success) {
-        std::cout << target << " has been robotomized successfully!\n";
+        std::cout << target << " has been robotomized successfully" << std::endl;
     } else {
-        std::cout << "Robotomy failed on " << target << "!\n";
+        std::cout << "Robotomy failed on " << target << "!" << std::endl;
     }
 }

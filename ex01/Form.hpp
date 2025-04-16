@@ -5,7 +5,7 @@
 #include <stdexcept>
 #include "Bureaucrat.hpp"
 
-class Bureaucrat; // forward declaration
+class Bureaucrat;
 
 class Form
 {
@@ -16,7 +16,6 @@ private:
     const int execGrade;
 
 public:
-    // Orthodox Canonical Form
     Form();
     Form(const std::string &name, int signGrade, int execGrade);
     Form(const Form &other);

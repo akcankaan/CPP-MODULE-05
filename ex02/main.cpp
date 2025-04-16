@@ -16,15 +16,15 @@ int main() {
         RobotomyRequestForm robotomyForm("Bob");
         ShrubberyCreationForm shrubberyForm("Garden");
 
-        std::cout << pardonForm;
-        std::cout << robotomyForm;
-        std::cout << shrubberyForm;
+        std::cout << pardonForm << std::endl;
+        std::cout << robotomyForm<< std::endl;
+        std::cout << shrubberyForm<< std::endl;
 
         junior.signForm(pardonForm);
-        std::cout << pardonForm;
+        std::cout << pardonForm<< std::endl;
 
         boss.signForm(pardonForm);
-        std::cout << pardonForm;
+        std::cout << pardonForm<< std::endl;
 
         junior.executeForm(pardonForm);
         boss.executeForm(pardonForm);
@@ -36,7 +36,6 @@ int main() {
         boss.executeForm(shrubberyForm);
 
         std::cout  << "The program successfully!" << std::endl;
-        Bureaucrat deneme("ben", 0);
     } catch (std::exception& e) {
         std::cerr << "Error: " << e.what() << std::endl;
     }
